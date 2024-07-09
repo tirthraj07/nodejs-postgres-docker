@@ -12,10 +12,7 @@ const pool = new Pool({
     connectionString: POSTGRES_CONNECTION_STRING
 })
 
-console.log('POSTGRES = ', POSTGRES_CONNECTION_STRING);
-
 pool.connect((err, client, release) => {
-    console.log(client);
     if (err) {
       return console.error('Error acquiring client', err.stack)
     }
